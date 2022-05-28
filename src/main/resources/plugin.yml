@@ -1,0 +1,11 @@
+
+name: UniversalLibs
+version: '${project.version}'
+
+author: UniversalStudio Inc
+
+api-version: 1.13
+main: ru.universalstudio.universallibs.UniversalLibs
+
+libraries:
+    - 'mysql:mysql-connector-java:5.1.49'
