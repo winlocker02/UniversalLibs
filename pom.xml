@@ -38,8 +38,8 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <dependencyReducedPomLocation>true</dependencyReducedPomLocation>
                             <relocations>
                                 <relocation>
                                     <pattern>ru.winlocker.utils</pattern>
