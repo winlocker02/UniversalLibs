@@ -31,30 +31,29 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.4</version>
+                <configuration>
+                    <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
+                    <relocations>
+                        <relocation>
+                            <pattern>ru.winlocker.utils</pattern>
+                            <shadedPattern>ru.universalstudio.universallibs.utils</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>com.cryptomorin.xseries</pattern>
+                            <shadedPattern>ru.universalstudio.universallibs.xseries</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>de.tr7zw</pattern>
+                            <shadedPattern>ru.universalstudio.universallibs.nbtapi</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <keepDependenciesWithProvidedScope>false</keepDependenciesWithProvidedScope>
-                            <relocations>
-                                <relocation>
-                                    <pattern>ru.winlocker.utils</pattern>
-                                    <shadedPattern>ru.universalstudio.universallibs.utils</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>com.cryptomorin.xseries</pattern>
-                                    <shadedPattern>ru.universalstudio.universallibs.xseries</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>de.tr7zw</pattern>
-                                    <shadedPattern>ru.universalstudio.universallibs.nbtapi</shadedPattern>
-                                </relocation>
-                            </relocations>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -108,7 +107,7 @@
         <dependency>
             <groupId>com.github.winlocker02</groupId>
             <artifactId>PluginUtils</artifactId>
-            <version>1.0.26</version>
+            <version>1.0.29</version>
         </dependency>
     </dependencies>
 </project>
