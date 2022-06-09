@@ -107,7 +107,7 @@
         <dependency>
             <groupId>com.github.winlocker02</groupId>
             <artifactId>PluginUtils</artifactId>
-            <version>1.0.33</version>
+            <version>1.0.34</version>
         </dependency>
     </dependencies>
 </project>
